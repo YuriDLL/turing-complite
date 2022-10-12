@@ -11,6 +11,8 @@
     ADD  {des1: source}, {des2: source}, {rez: source} => 0x40 @ des1 @ des2 @ rez
     SUB  {des1: source}, {val: i8}, {rez: source} => 0x41 @ des1 @ val @ rez
     SUB  {des1: source}, {des2: source}, {rez: source} => 0x41 @ des1 @ des2 @ rez
+    AND  {des1: source}, {val: i8}, {rez: source} => 0x42 @ des1 @ val @ rez
+    AND  {des1: source}, {des2: source}, {rez: source} => 0x42 @ des1 @ des2 @ rez
     MOV {val: i8}, {des: source} => 0xC0 @ val @ 0x00 @ des
     MOV {des1: source}, {des2: source} => 0x40 @ des1 @ 0x00 @ des2
     LDR {des: source}, {mem_addr: i8} => 0x7E @ mem_addr @ 0x00 @ des
@@ -25,4 +27,7 @@
     BL {des1: source}, {val: i8}, {addr: i8} => 0x62 @ des1 @ val @ addr
     BG {des1: source}, {des2: source}, {addr: i8} => 0x25 @ des1 @ des2 @ addr
     BG {des1: source}, {val: i8}, {addr: i8} => 0x65 @ des1 @ val @ addr
+    SEED {des: source} => 0x08 @ des @ 0x00 @ 0x00
+    RND {des: source} => 0x09 @ 0x00 @ 0x00 @ des
+    NOP => 0x56 @ 0x00 @ 0x00 @ 0x00
 }
