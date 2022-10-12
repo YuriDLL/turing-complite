@@ -6,7 +6,7 @@
         {
             "label": "build",
             "type": "shell",
-            "command": "python build.py src/planet_names.asm "
+            "command": "python build.py src/robot_racing.asm "
         }
     ]
 }
