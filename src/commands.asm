@@ -8,11 +8,11 @@
 #ruledef
 {
     ADD  {des1: source}, {val: i8}, {rez: source} => 0x40 @ des1 @ val @ rez
-    ADD  {des1: source}, {des2: source}, {rez: source} => 0x40 @ des1 @ des2 @ rez
+    ADD  {des1: source}, {des2: source}, {rez: source} => 0x00 @ des1 @ des2 @ rez
     SUB  {des1: source}, {val: i8}, {rez: source} => 0x41 @ des1 @ val @ rez
-    SUB  {des1: source}, {des2: source}, {rez: source} => 0x41 @ des1 @ des2 @ rez
+    SUB  {des1: source}, {des2: source}, {rez: source} => 0x01 @ des1 @ des2 @ rez
     AND  {des1: source}, {val: i8}, {rez: source} => 0x42 @ des1 @ val @ rez
-    AND  {des1: source}, {des2: source}, {rez: source} => 0x42 @ des1 @ des2 @ rez
+    AND  {des1: source}, {des2: source}, {rez: source} => 0x02 @ des1 @ des2 @ rez
     MOV {val: i8}, {des: source} => 0xC0 @ val @ 0x00 @ des
     MOV {des1: source}, {des2: source} => 0x40 @ des1 @ 0x00 @ des2
     LDR {des: source}, {mem_addr: i8} => 0x7E @ mem_addr @ 0x00 @ des
