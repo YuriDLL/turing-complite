@@ -27,6 +27,7 @@
     BE {des1: source}, {des2: source}, {addr: i8} => 0x20 @ des1 @ des2 @ addr
     BE {des1: source}, {val: i8}, {addr: i8} => 0x60 @ des1 @ val @ addr
     BNE {des1: source}, {des2: source}, {addr: i8} => 0x21 @ des1 @ des2 @ addr
+    BNE {des1: source}, {val: i8}, {addr: i8} => 0x61 @ des1 @ val @ addr
     BL {des1: source}, {des2: source}, {addr: i8} => 0x22 @ des1 @ des2 @ addr
     BL {des1: source}, {val: i8}, {addr: i8} => 0x62 @ des1 @ val @ addr
     BG {des1: source}, {des2: source}, {addr: i8} => 0x25 @ des1 @ des2 @ addr
